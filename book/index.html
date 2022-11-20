@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Book Shop</title>
+    </head>
+    <body>
+      
+
+        <script>
+            let header=document.createElement('header');
+            header.className="header";
+            header.style.width="100%";
+            header.style.height="200px";
+            header.style.backgroundColor="#99ccff";
+            document.body.style.backgroundColor="#ffff66";
+
+
+            let text=document.createElement('div');
+            text.className="text-container";
+            text.innerHTML=`<h3>Welcome Booker</h3>
+                            <h1>FIND YOUR FAVOURITE BOOKS HERE</h1>
+                            <p>From applied literature to educational resources, we have a lot of textbooks to offer you.We provide only the best books for rent.</p>`;
+            text.style.color=" #e60000";
+            text.style.textAlign="center";
+            text.style.padding="10px";
+            text.style.fontStyle="italic";
+
+
+           /* let button=document.createElement('div');
+            button.className="btn";
+            button.innerHTML=`<button> View Catalog</button>`;
+        
+            button.onclick=function(){
+                book.scrollIntoView({behaivor:smooth});
+            }*/
+            document.body.prepend(header);
+            header.prepend(text);
+           // header.append(button);
+
+
+            let main=document.createElement('div');
+            main.className="main-title";
+            main.innerHTML="<h1><strong>Book Catalog</strong></h1>";
+            main.style.textAlign="center";
+            main.style.color="#e60000";
+            main.padding="10px";
+            main.style.fontStyle="italic";
+            document.body.append(main);
+
+
+            let firstbook=document.createElement('div');
+            firstbook.className="first-container";
+            firstbook.style.width="750px";
+            firstbook.style.backgroundColor="#99ccff";
+            firstbook.style.color=" #e60000";
+            firstbook.style.marginLeft="70px";
+            firstbook.style.display="flex";
+            firstbook.style.alignItems="center";
+            firstbook.style.gap="10px";
+            firstbook.style.borderRadius="10px";
+            document.body.append(firstbook);
+            main.after(firstbook);
+
+            let image=document.createElement('div');
+            image.className="img";
+            image.innerHTML=`<img src="images/allegri.jpg" alt="book" /> `;
+            image.style.margin="15px";
+            firstbook.prepend(image);
+
+            let author=document.createElement('div');
+            author.className="author-name";
+            author.innerHTML=`<h2>Dante Alighieri</h2>
+                                <h2>The Divine Comedy</h2>
+                                <p>Price: $125</p>
+                                <button> Add to bag </button>`;
+            author.style.textAlign="center";
+            author.style.marginLeft="20px";
+            firstbook.append(author);
+
+    //second
+
+
+            let secondbook=document.createElement('div');
+            secondbook.className="second-container";
+            secondbook.style.width="750px";
+            secondbook.style.backgroundColor="#99ccff";
+            secondbook.style.color=" #e60000";
+            secondbook.style.marginLeft="70px";
+            secondbook.style.display="flex";
+            secondbook.style.alignItems="center";
+            secondbook.style.gap="10px";
+            secondbook.style.marginTop="10px";
+            secondbook.style.borderRadius="10px";
+            document.body.append(secondbook);
+            firstbook.after(secondbook);
+
+            let secondimage=document.createElement('div');
+            secondimage.className="img";
+            secondimage.innerHTML=`<img src="images/pere.jpg" alt="book" /> `;
+            secondimage.style.margin="15px";
+          
+            secondbook.prepend(secondimage);
+
+            let secondauthor=document.createElement('div');
+            secondauthor.className="author-name";
+            secondauthor.innerHTML=`<h2>Honoré de Balzac</h2>
+                                <h2>Le Père Goriot</h2>
+                                <p>Price: $200</p>
+                                <button> Add to bag </button>`;
+            secondauthor.style.textAlign="center";
+            secondauthor.style.marginLeft="20px";
+            secondbook.append(secondauthor);
+
+//third
+            let thirdbook=document.createElement('div');
+            thirdbook.className="third-container";
+            thirdbook.style.width="750px";
+            thirdbook.style.backgroundColor="#99ccff";
+            thirdbook.style.color=" #e60000";
+            thirdbook.style.marginLeft="70px";
+            thirdbook.style.display="flex";
+            thirdbook.style.alignItems="center";
+            thirdbook.style.gap="10px";
+            thirdbook.style.marginTop="10px";
+            thirdbook.style.borderRadius="10px";
+            document.body.append(thirdbook);
+            thirdbook.after(secondbook);
+
+            let thirdimage=document.createElement('div');
+            thirdimage.className="img";
+            thirdimage.innerHTML=`<img src="images/cesar.jpg" alt="book" /> `;
+            thirdimage.style.margin="15px";
+
+            thirdbook.prepend(thirdimage);
+
+            let thirdauthor=document.createElement('div');
+            thirdauthor.className="author-name";
+            thirdauthor.innerHTML=`<h2>William Shakespeare</h2>
+                                <h2> Julius Caesar </h2>
+                                <p>Price: $187</p>
+                                <button> Add to bag </button>`;
+            thirdauthor.style.textAlign="center";
+            thirdauthor.style.marginLeft="20px";
+            thirdbook.append(thirdauthor);
+
+
+//fourth
+            let fourthbook=document.createElement('div');
+            fourthbook.className="fourth-container";
+            fourthbook.style.width="750px";
+            fourthbook.style.backgroundColor="#99ccff";
+            fourthbook.style.color=" #e60000";
+            fourthbook.style.marginLeft="70px";
+            fourthbook.style.display="flex";
+            fourthbook.style.alignItems="center";
+            fourthbook.style.gap="10px";
+            fourthbook.style.marginTop="10px";
+            fourthbook.style.borderRadius="10px";
+            document.body.append(fourthbook);
+            fourthbook.before(thirdbook);
+
+            let fourthimage=document.createElement('div');
+            fourthimage.className="img";
+            fourthimage.innerHTML=`<img src="images/spring.jpg" alt="book" /> `;
+            fourthimage.style.margin="15px";
+
+            fourthbook.prepend(fourthimage);
+
+            let fourthauthor=document.createElement('div');
+            fourthauthor.className="author-name";
+            fourthauthor.innerHTML=`<h2>Ernest Hemingway</h2>
+                                <h2>The Torrents of Spring</h2>
+                                <p>Price: $150</p>
+                                <button> Add to bag </button>`;
+            fourthauthor.style.textAlign="center";
+            fourthauthor.style.marginLeft="20px";
+            fourthbook.append(fourthauthor);
+//fifth
+            let fifthbook=document.createElement('div');
+            fifthbook.className="fifth-container";
+            fifthbook.style.width="750px";
+            fifthbook.style.backgroundColor="#99ccff";
+            fifthbook.style.color=" #e60000";
+            fifthbook.style.marginLeft="70px";
+            fifthbook.style.display="flex";
+            fifthbook.style.alignItems="center";
+            fifthbook.style.gap="10px";
+            fifthbook.style.marginTop="10px";
+            fifth.style.borderRadius="10px";
+            document.body.append(fifthbook);
+            fifthbook.before(fourthbook);
+
+            let fifthimage=document.createElement('div');
+            fifthimage.className="img";
+            fifthimage.innerHTML=`<img src="images/miserables.jpg" alt="book" /> `;
+            fifthimage.style.margin="15px";
+
+            fifthbook.prepend(fifthimage);
+
+            let fifthauthor=document.createElement('div');
+            fifthauthor.className="author-name";
+            fifthauthor.innerHTML=`<h2>Victor Hugo</h2>
+                                <h2>Les Misérables</h2>
+                                <p>Price: $320</p>
+                                <button> Add to bag </button>`;
+            fifthauthor.style.textAlign="center";
+            fifthauthor.style.marginLeft="20px";
+            fifthbook.append(fifthauthor);
+
+
+
+
+
+
+
+
+        /*let title=document.createElement('div');
+        title.className="book-name";
+        title.innerHTML="<h2>The Divine Comedy</h2>";
+        title.style.fontWeight="bold";
+        title.style.textAlign="center";
+        book.append(title);
+
+
+        let price=document.createElement('div');
+        price.className="price";
+        price.innerHTML="<p>Price: $125</p>";
+        price.style.textAlign="center";
+        book.append(price);
+
+        let detail=document.createElement('div');
+        detail.className="details";
+        book.append(detail);
+
+        let show=document.createElement("div");
+        show.className="show-more";
+        show.innerHTML='<p>Shore More</p>';
+        detail.append(show);
+
+        let btn=document.createElement('div');
+        btn.className="button";
+        btn.innerHTML="<button> Add to bag </button>";
+        detail.prepend(btn);*/
+
+        </script>
+    </body>
+</html>
